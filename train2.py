@@ -127,7 +127,6 @@ def define_model(vocab_size, max_length):
     model.compile(loss='categorical_crossentropy', optimizer='adam')
     # суммарное описание модели
     model.summary()
-    plot_model(model, to_file='model.png', show_shapes=True)
     return model
 
 # генератор данных, используемый в вызове model.fit_generator()
