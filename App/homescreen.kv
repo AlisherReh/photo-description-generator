@@ -1,0 +1,31 @@
+<Homescreen>:
+    MDScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        MDBoxLayout:
+            id: mybox
+            orientation: 'vertical'
+            size_hint_y: 0.9
+            pos_hint: {"center_y": 0.8}
+            padding: 10
+            spacing: 10
+            Camera:
+                id: camera
+                resolution: (640, 480)
+                play: True
+            MDTextField:
+                id: name
+                hint_text: " "
+                font_size: 30
+            MDRaisedButton:
+                text: "Capture"
+                on_release: root.captureyouface()
+            MDRaisedButton:
+                text: "Switch Language"
+                on_release: root.switch_language()
+            MDLabel:
+                id: language_label
+                text: "Language: English"
+                halign: "center"
+            MDList:
+                id: resultbox
